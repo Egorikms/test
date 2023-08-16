@@ -1,1 +1,1 @@
-print ("ghbdtn")
+i = "gbdtn"
