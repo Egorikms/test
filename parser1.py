@@ -13,8 +13,10 @@ def main():
         name = item.find("h3", {"class": "film-name"}).text.strip()
         janr = item.find("p", {"class": "film-genre"}).text.strip()
         age = item.find("p", {"class": "adult-marker"}).text.strip()
-        print(f"{name} | {janr} | {age}")
-        print()
+        result = f"{name} | {janr} | {age} \n"
+        print(result)
+        with open("parser_result.txt", "a", encoding='utf-8') as file:
+            file.write(result)
 
 
 main()
